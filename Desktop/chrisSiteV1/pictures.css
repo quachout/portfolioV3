@@ -1,0 +1,29 @@
+
+
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing:border-box;
+    background-color: rgb(153, 68, 68);
+    
+    
+}
+
+
+.carousel-item{
+    text-align: center !important;
+    
+    height:auto;
+
+}
+
+
+.captionEdits{
+    font-family: "Work Sans",sans-serif;
+    font-weight: 100;
+    
+    color: rgba(0, 0, 0, 0.678);
+    padding-top: 8px;
+
+    
+}

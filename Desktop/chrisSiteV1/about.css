@@ -1,0 +1,627 @@
+
+:root{
+    --background: #87bbb8;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(315deg, #18323a, rgb(22, 32, 32));
+    margin:0 auto;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    min-height: 200vh;
+    text-align: center;
+}
+
+/*navigation styles start here*/
+header{
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0 .6rem rgb(0,0,0.2)
+}
+
+/* adjust logo*/
+.logo{
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-top: .2em;
+    padding-bottom: .2em;
+
+    
+    
+}
+
+.logo1{
+    
+    position:absolute;
+    
+    margin-top: 1.6em;
+    margin-left: -7.5em;
+
+}
+
+
+
+.nav-toggle{
+    display:none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left:1em;
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: white;
+    height:  2px;
+    width: 2em;
+    border-radius:2px;
+    position: relative;
+    
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: '';
+    position:absolute;
+
+}
+
+.nav-toggle-label span::before{
+    bottom:7px;
+    
+}
+
+.nav-toggle-label span::after{
+    top:7px;
+    
+}
+
+
+nav{
+    position: absolute;
+    text-align:left;
+    top: 100%;
+    left:0;
+    background: var(--background);
+    width: 100%;
+    transform:scale(1,0);
+    transform-origin:top;
+    /*transition: transform 400ms ease-in-out;*/
+
+
+    
+}
+
+
+
+
+
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+    list-style-type: none;
+    
+}
+
+nav a{
+    color:#444;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    opacity:0;
+    transition:opacity 250ms ease-in-out 200ms;
+    
+}
+
+
+
+nav a:hover{
+    color: #000;
+}
+
+
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+
+
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    
+}
+
+.dropdown-content{
+    display: none;
+}
+
+
+@media screen and (min-width:750px){ /*change this for width of screen*/
+    .nav-toggle-label{
+        display:none ;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px,0fr) 1fr;
+        
+    }
+
+    .logo{
+        position: relative;
+        grid-column: 2 / 3;
+        padding-right: 5em;
+        
+        
+        margin-top: 8px;
+        margin-bottom: 8px;
+        
+    }
+
+    .logo1{
+        all:unset;
+        position:absolute;
+        grid-column:2/3;
+        margin-left: -2em;
+        margin-top: 1em;
+
+        width:33px;
+        height:33px;
+        
+    }
+
+    nav{
+        all:unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        
+        
+    }
+
+    nav ul{
+        display: flex;
+        
+    }
+
+    nav li{
+        margin-left: 2.5em;
+        margin-bottom: 0;
+    }
+    nav a{
+        opacity: 1;
+        position:relative;
+    }
+
+    nav a::before{
+        content:'';
+        display:block;
+        height: 3px;
+        background: #444;
+        position: absolute;
+        top: -1.2em;
+        left:0;
+        right:0;
+        transform: scale(0,1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before{
+        transform: scale(1,1);
+    }
+
+
+    /*drop down*/
+  
+
+    .dropdown a:hover::before{
+        width:100% ;
+    }
+
+    .dropdown-content a:hover::before{
+        all: unset;
+        width:0% !important;
+    }
+    
+    .dropdown-content {
+        
+        display: none;
+        position: absolute;
+        background-color: #87bbb8;
+        min-width: 160px;
+        
+        z-index: 1;
+        
+    }
+    
+    .dropdown-content a {
+        
+        color:#444 ;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        
+    }
+
+    
+    .dropdown-content a:hover {
+        
+        background-color: #868da1;
+        color:black;
+    }
+    /*#7b88b4*/
+    .dropdown:hover .dropdown-content {
+        
+        display: block ;
+    }
+
+    /*drop down*/
+
+    @keyframes fadeAndScale{
+        from{
+          opacity: 0;
+          /*transform: scale3D(.75,.75, .75);
+          changes the fade in*/
+        }
+        to{
+          opacity:1;
+          /*transform: scale3D(1,1,1);*/
+        }
+      }
+      
+    .fadeName{
+        text-align: center;
+        font-size: 20px;
+        font-family: tahoma;
+        height:100%;
+        
+        overflow: hidden;
+        color: rgb(117, 66, 66);
+      
+      }
+      
+      
+    .name{
+        font-size: 40px;
+        color: white;
+        position:absolute; 
+        top: 30%;
+        left:12%;
+        right:5%;
+        animation:fadeAndScale .8s ease-in;
+    }
+
+
+}
+
+/*text*/
+
+.aboutMe{
+    color: white;
+    margin: auto;
+    padding: 70px 80px 10px 80px;
+    font-size: 22px;
+
+
+
+    /*border: 3px solid green;*/
+}
+
+
+/*hobbies*/
+.hobbies{
+    color: white;
+    margin:0 auto;
+    margin-top: -5em;
+    
+    
+    
+
+  }
+
+
+.column{
+    float:left;
+    
+   /* border: 3px solid green;*/
+  }
+  
+  .left{
+    width:30%;
+    margin:0 auto;
+    margin-left: 3.5em;
+
+    /*remove margin-bottom when adding new things after hobbies */
+    margin-bottom:5em;
+}
+  
+  .middle{
+    width:  30%;
+    margin:0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+  
+  .right{
+    width:30%;
+    margin:0 auto;
+    margin-right:-.5em ;
+    
+
+  }
+  
+
+  .row:after{
+    content:"";
+    display: table;
+    clear: both;
+
+    
+  }
+
+
+/*hobbies*/
+
+
+
+
+
+ /*what ive done*/
+    
+ .done{
+    
+    color: white;
+    margin: 100px auto;
+    text-align: center;
+    font-size:40px;
+    margin-top: 3em;
+    position: relative;
+
+
+
+
+}
+
+.done:before{
+    
+    content:"";
+    display:block;
+    width:200px;
+    height:2px;
+    background:white;
+    position: absolute;
+    
+    left:1em;
+    top:50%;
+    z-index:-2;
+
+}
+.done:after{
+    content:"";
+    display:block;
+    width:200px;
+    height:2px;
+    background:white;
+    position: absolute;
+
+    
+    right:1em;
+    top:50%;
+    z-index:-2;
+    
+    
+}
+
+span{
+
+    background:#fff;
+    
+}
+
+
+
+
+
+
+/*things ive done*/
+
+ /*raytheon sw intern*/
+ .swe{
+    font-size:25px;
+    color:white;
+
+    margin:0;
+    margin-left:1.5em;
+    margin-top: -3em;
+    text-shadow: 2px 2px #ff0000d2;
+    
+    
+}
+
+.sweP{
+    margin:0 auto;
+    word-wrap: break-word;
+    color: white;
+    width: 80%;
+    font-weight: bold;
+    margin-left: 5em;
+    
+}
+
+.sweP1{
+    margin:0 auto;
+    word-wrap: break-word;
+    color: white;
+    width: 80%;
+    
+    margin-left: 5em;
+}
+
+
+    
+
+
+
+
+/*raytheon sw inter*/
+
+/*raytheon it inertn*/
+
+.it{
+    font-size:25px;
+    color:white;
+
+    margin:0;
+    margin-left:1.5em;
+    margin-top: 1em;
+    text-shadow: 2px 2px #ff0000d2;
+    
+    
+}
+
+
+/*raytheon it intern*/
+
+
+
+/*new format*/
+.table {
+	width:100%;
+	max-width:800px;
+	border:0px;
+	border-spacing:0px;
+	border-collapse:separate;
+	margin: 0 auto;
+}
+
+.subheader {
+    
+    margin: auto;
+    margin-bottom: 0;
+    padding-top:4em;
+    color:white;
+    margin-left: 1em;
+    
+    font-size: 28px;
+  
+}
+
+.descriptionTD{
+	padding: 0 2.5% 2.5% 1%;  /* top right bottom left*/
+    width: 40%;
+    color:white;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 0;
+    
+}
+
+.companyLogo{
+   
+	/*padding: 2.5% 2.5% 2.5% 1%;*/
+	text-align: center;
+    width: 6%;
+    
+    margin:0 ;
+    
+    
+    
+    
+}
+
+.companyLogo img{
+	max-width: 80%;
+}
+
+
+
+#DataLabTD img, #LATD img, #ICSHPTD img{     /* fix to make logo smaller */
+	width: 75%;
+}
+
+.subheader2 {
+    margin:0 auto;
+    color:white;
+    margin-top: -3em;
+    font-size: 25px;
+    margin-left:-16em;
+    
+
+}
+.subheader3 {
+    margin:0 auto;
+    color:white;
+    margin-top: 1em;
+    font-size: 25px;
+    margin-left:-13em;
+}
+.subheader4 {
+    margin:0 auto;
+    color:white;
+    margin-top: 1em;
+    font-size: 25px;
+    margin-left:-22em;
+}
+
+.companyLogo1{
+   
+	/*padding: 2.5% 2.5% 2.5% 1%;*/
+	text-align: center;
+    width: 6%;
+    
+    margin:0 ;
+    
+}
+
+.companyLogo1 img{
+    max-width: 140%;
+    margin-left:-1.4em;
+    
+}
+
+.companyLogo2{
+   
+	/*padding: 2.5% 2.5% 2.5% 1%;*/
+	text-align: center;
+    width: 6%;
+    
+    margin:0 ;
+    
+}
+
+.companyLogo2 img{
+    max-width: 110%;
+    margin-left:-1.4em;
+    
+}
+/*new format*/
+
+
