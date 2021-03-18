@@ -3,6 +3,13 @@ body{
     cursor: crosshair;
 }
 /* navbar */
+.header{
+    position:fixed;
+    width:100%;
+    background-color:#F7F7F7;
+    height: 8em;
+    
+}
 div a{
     text-decoration: none ;
     list-style-type: none;
@@ -89,7 +96,7 @@ div logo{
 #raySASPic{
     width: 380px;
     height: auto;
-    margin-left: -5em;
+    margin-left: -5.5em;
 }
 div projectTitle{
     font-size: 30px;
@@ -110,3 +117,7 @@ div projectInfo span{
     display: block;
 }
 /* projects */
+
+
+
+/* scroll to top button */
