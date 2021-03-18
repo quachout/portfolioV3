@@ -56,6 +56,13 @@ div logo{
 }
 
 #aboutText{
-    font-size: 21px;
+    font-size: 23px;
 }
 
+.col-example {
+    /* padding: 10rem; */
+   
+    /* border: 2px solid rgb(119, 97, 97); */
+
+    /* text-align: center; */
+  }
