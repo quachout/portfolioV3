@@ -1,0 +1,102 @@
+body{
+    background-color: #F7F7F7 !important;
+    cursor: crosshair;
+}
+/* navbar */
+div a{
+    text-decoration: none ;
+    list-style-type: none;
+    color: black;
+    list-style: none;
+    display: flex;
+    justify-content: space-around  ;
+}
+
+div a:hover, #moon:hover{
+    color: violet;
+}
+
+#navbar{
+    list-style-type: none;
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+
+    /* position: fixed; Set the navbar to fixed position */
+
+}
+
+#moon{
+    color: black;
+}
+
+div logo{
+    display: inline-block;
+    margin-top: -9px !important ;
+    font-weight: 600 !important;
+    font-size: 35px !important;
+}
+
+
+/* navbar */
+
+/* intro */
+#intro{
+    margin-top: 4em;
+}
+
+#what{
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#name{
+    margin-top: 50px;
+    font-size: 90px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#introParagraph{
+    margin-top: 40px;
+    /* outline-style: solid; */
+    font-size: 30px;
+    max-width: 28em;
+}
+
+#arrow{
+    margin-top: -.2em;
+}
+/* intro */
+
+/* projects */
+#subHeader{
+    font-size: 45px;
+    font-weight: 500;
+}
+
+#spotifyPic{
+    width: 280px;
+    height: auto;
+}
+
+div projectTitle{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+div projectPosition{
+    font-size: 23px;
+    font-weight: 350;
+}
+
+div projectInfo{
+    font-size:25px ;
+}
+
+div projectInfo span{
+    display: block;
+}
+/* projects */
