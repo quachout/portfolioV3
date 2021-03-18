@@ -81,10 +81,20 @@ div logo{
     width: 280px;
     height: auto;
 }
-
+#rayTechPic{
+    margin-top: .8em;
+    width: 200px;
+    height: auto;
+}
+#raySASPic{
+    width: 380px;
+    height: auto;
+    margin-left: -5em;
+}
 div projectTitle{
     font-size: 30px;
     font-weight: 500;
+    
 }
 
 div projectPosition{
