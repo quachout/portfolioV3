@@ -188,6 +188,7 @@ div logo{
         width: 40px;    /*had to make this adjsutment*/
         height: 30px;    /*had to make this adjsutment*/
        margin-top: -2.3em;
+       z-index:2;
     }
     .burger div{
         width:25px;
@@ -228,6 +229,7 @@ div logo{
         font-family: 'Raleway', sans-serif !important;
         color: black !important;
         margin-top: 1.1em;
+        z-index:2;
     }
 
     #burgerButton{
