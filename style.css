@@ -21,7 +21,7 @@ div a{
 }
 
 div a:hover, #moon:hover{
-    color: #cecaca;
+    color: lightgrey;
 }
 
 #navbar{
