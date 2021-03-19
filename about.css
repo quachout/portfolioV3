@@ -124,7 +124,11 @@ div logo{
     }
     #aboutMePhoto{
         margin-top: 0em;
+        border-radius: 15px;
+        width: 300px;
+        height: auto;
     }
+
     #aboutContainer{
         flex-wrap:wrap;
         margin-top: -13em;
@@ -171,7 +175,7 @@ div logo{
     .nav-links li{
         list-style:none;
         opacity:0;
-        font-weight: 500;
+        font-weight: 550;
        
         
         
@@ -247,7 +251,7 @@ div logo{
         z-index:2;
     }
 
-    #burgerButton{
+    
        
     /* my nav */
 

@@ -3,12 +3,18 @@ body{
     cursor: crosshair;
 }
 /* navbar */
+#customNav{
+    display: none;
+}
+#bigNav{
+    z-index: 2;
+}
 .header{
     position:fixed;
     width:100%;
     background-color:#F7F7F7;
     height: 8em;
-    opacity: 96%;
+    opacity: 85%;
     
 }
 div a{
@@ -177,8 +183,209 @@ div projectInfo span{
 
 
 
-@media screen and (max-width:750px){
+@media screen and (max-width:700px){
     body{
-        background-color: blue !important;
+        background-color: #F7F7F7 !important;
     }      
+    #bigNav{
+        display: none;
+    }
+    .header{
+        position:fixed;
+        width:100%;
+        background-color:#F7F7F7;
+        height: 8em;
+        opacity: 96%;
+        
+    }
+    #intro{
+        margin-top: 0em;
+    }
+    #what{
+        font-size: 35px;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+    }
+    #name{
+        margin-top: 10px;
+        font-size: 60px;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+    }
+    #introParagraph{
+        margin-top: 40px;
+        /* outline-style: solid; */
+        font-size: 25px;
+        max-width: 28em;
+        margin-top: .5em;
+    }
+    div projectTitle{
+        font-size: 25px;
+        font-weight: 500;
+        
+    }
+    
+    div projectPosition{
+        font-size: 21px;
+        font-weight: 350;
+    }
+    
+    div projectInfo{
+        font-size:20px ;
+    }
+    
+    div projectInfo span{
+        display: block;
+    }
+    #subHeader{
+        font-size: 40px;
+        font-weight: 500;
+    }
+    #myProjects{
+        margin-top: -10em;
+    }
+    #spotifyPic{
+        width: 150px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #rayTechPic{
+        margin-top: .8em;
+        width: 130px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #raySASPic{
+        width: 250px;
+        height: auto;
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #myBtn{
+        margin-bottom: 2em;
+    }
+    /* burger nav */
+        /*my nav*/
+        #customNav{
+            display: initial;
+        }
+        nav{
+            /* display: flex;///////////////////////////////////// */
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            background-color:#F7F7F7;
+            /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
+            
+        }
+        
+        .nav-links{
+            all: unset;
+            display:flex;
+            justify-content: space-around;
+            width: 100%;
+            position: absolute;
+            left:0px;
+            height:95vh;
+            top:8vh;
+            background-color:#F7F7F7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform:translateX(-100%); /*this is supposed to be 100*/
+            /*transition: all 0.5s ease-in;*/ /*this transition has prob w resizinf window*/
+            font-family: 'Raleway', sans-serif !important;
+            z-index:1;
+           
+            
+        }
+        
+        .nav-links li{
+            list-style:none;
+            opacity:0;
+            font-weight: 550;
+           
+            
+            
+        }
+        
+        .nav-links a{
+            text-decoration: none;
+            letter-spacing: 3px;
+            background-color: #F7F7F7;
+            font-size: 20px;
+            color:black;
+            margin-top: 0em; 
+            
+        
+        }
+        
+        .nav-links a:hover{
+            color:lightgrey;
+            transition:  0.3s ease;
+        }
+        
+        .burger{
+            display:block;
+            cursor: pointer;
+            margin-left: 3em;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #F7F7F7;
+            width: 40px;    /*had to make this adjsutment*/
+            height: 30px;    /*had to make this adjsutment*/
+           margin-top: -2.3em;
+           z-index:2;
+        }
+        .burger div{
+            width:25px;
+            height: 2px;
+            background-color: black;
+            margin:5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-active{
+            transform: translateX(0%);
+        }
+        
+        @keyframes navLinkFade{
+            from{
+                opacity:0;
+                transform:translateX(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+        
+        .toggle .line1{
+            transform: rotate(-45deg) translate(-5px,6px);
+        }
+        .toggle .line2{
+            opacity: 0;
+        }
+        .toggle .line3{
+            transform: rotate(45deg) translate(-4px,-5px);
+        }
+        
+        .myLogo{
+            font-size: 35px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif !important;
+            color: black !important;
+            margin-top: 1.17em;
+            z-index:2;
+        }
+    
+        
+           
+        /* my nav */
 }
