@@ -81,8 +81,20 @@ div logo{
 }
 
 #arrow{
-    margin-top: -.2em;
+    margin-top: .4em;
+
+    animation: MoveUpDown 1s linear infinite;
+    position: relative;
+
 }
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 12px;
+    }
+  }
 /* intro */
 
 /* projects */
@@ -173,6 +185,7 @@ div projectInfo span{
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
+    opacity: 90%;
   }
   
   #myBtn:hover {
@@ -343,6 +356,7 @@ div projectInfo span{
            margin-top: -2.3em;
            z-index:2;
         }
+
         .burger div{
             width:25px;
             height: 2px;
@@ -350,7 +364,7 @@ div projectInfo span{
             margin:5px;
             transition: all 0.3s ease;
         }
-        
+
         .nav-active{
             transform: translateX(0%);
         }
