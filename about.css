@@ -145,7 +145,7 @@ div logo{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        min-height: 8vh;
+        min-height: 10vh;
         background-color:#F7F7F7;
         /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
         
