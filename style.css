@@ -28,6 +28,7 @@ div a{
 
 div a:hover, #moon:hover{
     color: lightgrey;
+    transition:  0.3s ease;
 }
 
 #navbar{
@@ -149,6 +150,7 @@ div projectInfo span{
 #mail:hover{
     color: #cecaca;
     transform: scale(1.5);
+    
     
 }
 #linkedin{
