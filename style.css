@@ -107,16 +107,19 @@ div logo{
 #spotifyPic{
     width: 280px;
     height: auto;
+    border-radius: 15px;
 }
 #rayTechPic{
     margin-top: .8em;
     width: 200px;
     height: auto;
+    
 }
 #raySASPic{
-    width: 380px;
+    width: 200px;
     height: auto;
-    margin-left: -5.5em;
+    margin-top: 2em;
+    border-radius: 15px;
 }
 div projectTitle{
     font-size: 30px;
@@ -275,7 +278,7 @@ div projectInfo span{
         margin-right: auto;
     }
     #raySASPic{
-        width: 250px;
+        width: 120px;
         height: auto;
 
         display: block;
@@ -355,7 +358,7 @@ div projectInfo span{
             background-color: #F7F7F7;
             width: 45px;    /*had to make this adjsutment -5 */
             height: 35px;   /* had to make this adjsutment -5 */
-            margin-top: -2.3em;
+            margin-top: -2.5em;
             z-index:2;
            
         }
