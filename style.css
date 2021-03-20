@@ -353,10 +353,11 @@ div projectInfo span{
             border: 2px solid black;
             border-radius: 5px;
             background-color: #F7F7F7;
-            width: 40px;    /*had to make this adjsutment*/
-            height: 30px;    /*had to make this adjsutment*/
-           margin-top: -2.3em;
-           z-index:2;
+            width: 45px;    /*had to make this adjsutment -5 */
+            height: 35px;   /* had to make this adjsutment -5 */
+            margin-top: -2.3em;
+            z-index:2;
+           
         }
 
         .burger div{
@@ -365,6 +366,9 @@ div projectInfo span{
             background-color: black;
             margin:5px;
             transition: all 0.3s ease;
+            margin-left: .49em; /*size adjustment*/
+            
+            
         }
 
         .nav-active{
@@ -381,15 +385,20 @@ div projectInfo span{
                 transform: translateX(0px);
             }
         }
-        
+        #line1{
+            margin-top: .45em; /*size adjustment*/
+        }
+
         .toggle .line1{
             transform: rotate(-45deg) translate(-5px,6px);
+            background-color: grey;
         }
         .toggle .line2{
             opacity: 0;
         }
         .toggle .line3{
             transform: rotate(45deg) translate(-4px,-5px);
+            background-color: grey;
         }
         
         .myLogo{
