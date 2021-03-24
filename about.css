@@ -1,11 +1,45 @@
+:root{
+    --backgroundWhite: #F7F7F7;
+    --fontBlack: black;
+    --hoverLight: lightgrey;
+    --backgroundDark: #192734;
+    --fontWhite: #EEEEEE;
+    --burgerLinesWhite: #EEEEEE;
+    --burgerLinesBlack: black;
+    --hoverDark: #555;
+}
+* {
+    transition: background-color 0.4s ease, color .2s ease;
+  }
+/* color theme */
+.lightTheme{
+    --themeDropDownBg: var(--backgroundWhite);
+    --themeFontColor: var(--fontBlack);
+    --hoverColor: var(--hoverLight);
+    --burgerLinesColor: var(--burgerLinesBlack);
+}
+
+.darkTheme{
+    --themeDropDownBg: var(--backgroundDark);
+    --themeFontColor: var(--fontWhite);
+    --hoverColor: var(--hoverDark);
+    --burgerLinesColor: var(--burgerLinesWhite);
+}
+/* color theme */
+
+
 body{
-    background-color: #F7F7F7 !important;
+    background-color: var(--themeDropDownBg) !important;
     cursor: crosshair;
+    
+}
+#aboutText{
+    color: var(--themeFontColor) !important;
 }
 /* navbar */
 .header{
     width: 100%;
-    background-color: #F7F7F7;
+    background-color: var(--themeDropDownBg);
     height: 7em;
     position: fixed;
     margin-top:0em ;
@@ -17,7 +51,7 @@ body{
 div a{
     text-decoration: none ;
     list-style-type: none;
-    color: black;
+    color: var(--themeFontColor);
     list-style: none;
     display: flex;
     justify-content: space-around  ;
@@ -39,7 +73,7 @@ div a:hover, #moon:hover{
 }
 
 #moon{
-    color: black;
+    color: var(--themeFontColor) !important;
 }
 
 div logo{
@@ -92,23 +126,26 @@ div logo{
 /* grey */
 @media screen and (max-width:1092px){
     body{
-        background-color: #F7F7F7 !important;
+        background-color: var(--themeDropDownBg) !important;
+        color: var(--themeFontColor)
     }
 
     #aboutText{
         font-size: 20px;
+        color: var(--themeFontColor);
     }
 }
 
 /* blue */
 @media screen and (max-width:950px){
     body{
-        background-color:F7F7F7 !important;
+        background-color:var(--themeDropDownBg) !important;
     }
 
     #aboutText{
         all: unset;
         font-size: 20px;
+        color: var(--themeFontColor);
     }
     #aboutContainer{
         flex-wrap:wrap;
@@ -120,7 +157,7 @@ div logo{
 /* orange */
 @media screen and (max-width:700px){ 
     body{
-        background-color: #F7F7F7 !important;
+        background-color: var(--themeDropDownBg) !important;
     }
     #aboutMePhoto{
         margin-top: 0em;
@@ -140,13 +177,14 @@ div logo{
 
     #customNav{
         display: initial;
+       
     }
     nav{
         display: flex;
         justify-content: space-around;
         align-items: center;
         min-height: 10vh;
-        background-color:#F7F7F7;
+        background-color: var(--themeDropDownBg) !important;
         /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
     }
     
@@ -159,7 +197,7 @@ div logo{
         left:0px;
         height:95vh;
         top:8vh;
-        background-color:#F7F7F7;
+        background-color: var(--themeDropDownBg) !important;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -183,9 +221,9 @@ div logo{
     .nav-links a{
         text-decoration: none;
         letter-spacing: 3px;
-        background-color: #F7F7F7;
+        background-color: var(--themeDropDownBg) !important;
         font-size: 20px;
-        color:black;
+        color:var(--themeFontColor);
         margin-top: 0em; 
         
     
@@ -200,9 +238,9 @@ div logo{
         display:block;
         cursor: pointer;
         margin-left: .5em;
-        border: 2px solid black;
+        border: 2px solid var(--burgerLinesColor) ;
         border-radius: 5px;
-        background-color: #F7F7F7;
+        background-color: var(--themeDropDownBg) !important;
         width: 45px;    /*had to make this adjsutment -5 */
         height: 35px;   /* had to make this adjsutment -5 */
         margin-top: -2.5em;
@@ -211,7 +249,7 @@ div logo{
     .burger div{
         width:25px;
         height: 2px;
-        background-color: black;
+        background-color: var(--burgerLinesColor);
         margin:5px;
         transition: all 0.3s ease;
         margin-left: .49em; /*size adjustment*/

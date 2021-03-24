@@ -1,7 +1,39 @@
-body{
-    background-color: #F7F7F7 !important;
-    cursor: crosshair;
+:root{
+    --backgroundWhite: #F7F7F7;
+    --fontBlack: black;
+    --hoverLight: lightgrey;
+    --backgroundDark: #192734;
+    --fontWhite: #EEEEEE;
+    --burgerLinesWhite: #EEEEEE;
+    --burgerLinesBlack: black;
+    --hoverDark: #555;
 }
+* {
+    transition: background-color 0.4s ease, color .2s ease;
+  }
+/* color theme */
+.lightTheme{
+    --themeDropDownBg: var(--backgroundWhite);
+    --themeFontColor: var(--fontBlack);
+    --hoverColor: var(--hoverLight);
+    --burgerLinesColor: var(--burgerLinesBlack);
+}
+
+.darkTheme{
+    --themeDropDownBg: var(--backgroundDark);
+    --themeFontColor: var(--fontWhite);
+    --hoverColor: var(--hoverDark);
+    --burgerLinesColor: var(--burgerLinesWhite);
+}
+/* color theme */
+
+body{
+    background-color: var(--themeDropDownBg) !important;
+    cursor: crosshair;
+    
+}
+
+
 /* navbar */
 #customNav{
     display: none;
@@ -12,7 +44,7 @@ body{
 .header{
     position:fixed;
     width:100%;
-    background-color:#F7F7F7;
+    background-color: var(--themeDropDownBg);
     height: 8em;
     opacity: 85%;
     
@@ -20,17 +52,20 @@ body{
 div a{
     text-decoration: none ;
     list-style-type: none;
-    color: black;
+    color: var(--themeFontColor);
     list-style: none;
     display: flex;
     justify-content: space-around  ;
 }
 
 div a:hover, #moon:hover{
-    color: lightgrey;
+    color: var(--hoverColor);
     transition:  0.3s ease;
 }
-
+#moon{
+    color: var(--themeFontColor);
+    
+}
 #navbar{
     list-style-type: none;
     
@@ -42,10 +77,7 @@ div a:hover, #moon:hover{
 
 }
 
-#moon{
-    color: black;
-    
-}
+
 
 div logo{
     display: inline-block;
@@ -60,6 +92,7 @@ div logo{
 /* intro */
 #intro{
     margin-top: 4em;
+    color: var(--themeFontColor);
 }
 
 #what{
@@ -103,6 +136,7 @@ div logo{
 #subHeader{
     font-size: 45px;
     font-weight: 500;
+    color: var(--themeFontColor);
 }
 
 #spotifyPic{
@@ -125,16 +159,18 @@ div logo{
 div projectTitle{
     font-size: 30px;
     font-weight: 500;
-    
+    color: var(--themeFontColor);
 }
 
 div projectPosition{
     font-size: 23px;
     font-weight: 350;
+    color: var(--themeFontColor);
 }
 
 div projectInfo{
     font-size:25px ;
+    color: var(--themeFontColor);
 }
 
 div projectInfo span{
@@ -144,7 +180,7 @@ div projectInfo span{
 
 /*social media*/
 #socials{
-
+    color: var(--themeFontColor);
 }
 
 #mail{
@@ -154,7 +190,7 @@ div projectInfo span{
 #mail:hover{
     color: #cecaca;
     transform: scale(1.5);
-    
+    color: var(--hoverColor);
     
 }
 #linkedin{
@@ -163,6 +199,7 @@ div projectInfo span{
 #linkedin:hover{
     color: #cecaca;
     transform: scale(1.5);
+    color: var(--hoverColor);
 }
 #github{
     margin-left: 4em;
@@ -171,6 +208,7 @@ div projectInfo span{
 #github:hover{
     color: #cecaca;
     transform: scale(1.5);
+    color: var(--hoverColor);
 }
 /* social media */
 
@@ -205,15 +243,23 @@ div projectInfo span{
 
 @media screen and (max-width:700px){
     body{
-        background-color: #F7F7F7 !important;
+        background-color: var(--themeDropDownBg) !important;
     }      
     #bigNav{
         display: none;
     }
+    div a:hover, #moon2:hover{
+        color: var(--hoverColor);
+        transition:  0.3s ease;
+    }
+    #moon2{
+        color: var(--themeFontColor);
+        
+    }
     .header{
         position:fixed;
         width:100%;
-        background-color:#F7F7F7;
+        background-color: var(--themeDropDownBg);
         height: 8em;
         opacity: 96%;
         
@@ -294,14 +340,16 @@ div projectInfo span{
         /*my nav*/
         #customNav{
             display: initial;
+            
         }
         nav{
             /* display: flex;///////////////////////////////////// */
             justify-content: space-around;
             align-items: center;
             min-height: 8vh;
-            background-color:#F7F7F7;
+            background-color: var(--themeDropDownBg);
             /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
+            
             
         }
         
@@ -314,7 +362,7 @@ div projectInfo span{
             left:0px;
             height:95vh;
             top:8vh;
-            background-color:#F7F7F7;
+            background-color: var(--themeDropDownBg);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -322,7 +370,7 @@ div projectInfo span{
             /*transition: all 0.5s ease-in;*/ /*this transition has prob w resizinf window*/
             font-family: 'Raleway', sans-serif !important;
             z-index:1;
-           
+            
             
         }
         
@@ -330,7 +378,7 @@ div projectInfo span{
             list-style:none;
             opacity:0;
             font-weight: 550;
-           
+            
             
             
         }
@@ -338,9 +386,9 @@ div projectInfo span{
         .nav-links a{
             text-decoration: none;
             letter-spacing: 3px;
-            background-color: #F7F7F7;
+            background-color: var(--themeDropDownBg);
             font-size: 20px;
-            color:black;
+            color: var(--themeFontColor);
             margin-top: 0em; 
             
         
@@ -355,9 +403,9 @@ div projectInfo span{
             display:block;
             cursor: pointer;
             margin-left: 3em;
-            border: 2px solid black;
+            border: 2px solid var(--burgerLinesColor);
             border-radius: 5px;
-            background-color: #F7F7F7;
+            background-color: var(--themeDropDownBg);
             width: 45px;    /*had to make this adjsutment -5 */
             height: 35px;   /* had to make this adjsutment -5 */
             margin-top: -2.5em;
@@ -368,7 +416,7 @@ div projectInfo span{
         .burger div{
             width:25px;
             height: 2px;
-            background-color: black;
+            background-color: var(--burgerLinesColor);
             margin:5px;
             transition: all 0.3s ease;
             margin-left: .49em; /*size adjustment*/
@@ -410,7 +458,7 @@ div projectInfo span{
             font-size: 35px;
             font-weight: 600;
             font-family: 'Raleway', sans-serif !important;
-            color: black !important;
+            color: var(--themeFontColor) !important;
             margin-top: 1.17em;
             z-index:2;
         }

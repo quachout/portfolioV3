@@ -57,8 +57,22 @@ const navSlide = () => {
   });
 
 }
+// navBar button //////////////////////////////////////////////////
 
+// light theme ////////////////////////////////////////////////////
+const themeSwitch = document.querySelector('#moon');
 
+themeSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('darkTheme');
+});
+// light theme ////////////////////////////////////////////////////
+
+// light theme2 ////////////////////////////////////////////////////
+const themeSwitch2 = document.querySelector('#moon2');
+
+themeSwitch2.addEventListener('click', () => {
+  document.body.classList.toggle('darkTheme');
+});
+// light theme2 ////////////////////////////////////////////////////
 navSlide();
 
-//flex-wrap
