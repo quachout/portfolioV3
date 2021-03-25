@@ -86,3 +86,17 @@ themeSwitch2.addEventListener('click', () => {
   document.body.classList.toggle('darkTheme');
 });
 // light theme2 ////////////////////////////////////////////////////
+// light theme3 ////////////////////////////////////////////////////
+const themeSwitch3 = document.querySelector('#sun');
+
+themeSwitch3.addEventListener('click', () => {
+  document.body.classList.toggle('darkTheme');
+});
+// light theme3 ////////////////////////////////////////////////////
+// light theme4 ////////////////////////////////////////////////////
+const themeSwitch4 = document.querySelector('#sun2');
+
+themeSwitch4.addEventListener('click', () => {
+  document.body.classList.toggle('darkTheme');
+});
+// light theme4 ////////////////////////////////////////////////////

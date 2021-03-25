@@ -7,6 +7,8 @@
     --burgerLinesWhite: #EEEEEE;
     --burgerLinesBlack: black;
     --hoverDark: #555;
+    --displayNone: none;
+    --displayInitial: initial;
 }
 * {
     transition: background-color 0.4s ease, color .2s ease;
@@ -17,6 +19,8 @@
     --themeFontColor: var(--fontBlack);
     --hoverColor: var(--hoverLight);
     --burgerLinesColor: var(--burgerLinesBlack);
+    --moonIcon: var(--displayInitial);
+    --sunIcon: var(--displayNone);
 }
 
 .darkTheme{
@@ -24,6 +28,8 @@
     --themeFontColor: var(--fontWhite);
     --hoverColor: var(--hoverDark);
     --burgerLinesColor: var(--burgerLinesWhite);
+    --moonIcon: var(--displayNone);
+    --sunIcon: var(--displayInitial);
 }
 /* color theme */
 
@@ -64,7 +70,13 @@ div a:hover, #moon:hover{
 }
 #moon{
     color: var(--themeFontColor);
+    display: var(--moonIcon) ;
     
+}
+#sun{
+    color: var(--themeFontColor);
+    margin-top: -.14em;
+    display: var(--sunIcon);
 }
 #navbar{
     list-style-type: none;
@@ -254,7 +266,13 @@ div projectInfo span{
     }
     #moon2{
         color: var(--themeFontColor);
+        display: var(--moonIcon) ;
         
+    }
+    #sun2{
+        color: var(--themeFontColor);
+        display: var(--sunIcon) ;
+        margin-top: -5em;
     }
     .header{
         position:fixed;
