@@ -251,25 +251,25 @@ div projectInfo span{
   /* scroll to top button */
 
 @media screen and (max-width:1200px){
-    *{
+    /* *{
         background-color: red !important;
-    }
+    } */
     #projectText{
         margin-left: 2em;
     }
 }
 @media screen and (max-width:1050px){
-    *{
+    /* *{
         background-color: green !important;
-    }
+    } */
     #projectText{
         margin-left: 3em;
     }
 }
 @media screen and (max-width:990px){
-    *{
+    /* *{
         background-color: orange !important;
-    }
+    } */
     #projectText{
         margin-left: 0em;
     }
