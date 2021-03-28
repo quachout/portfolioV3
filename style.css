@@ -224,7 +224,13 @@ div projectInfo span{
 }
 /* social media */
 
-
+/* footer  */
+#footerText{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--themeFontColor);
+}
 
 /* scroll to top button */
 #myBtn {
