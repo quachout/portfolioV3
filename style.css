@@ -503,7 +503,10 @@ div projectInfo span{
             z-index:2;
         }
     
-        
+        /* footer  */
+        #footerText{
+            text-align: center;
+        }
            
         /* my nav */
 }
