@@ -64,7 +64,7 @@ div a{
     justify-content: space-around  ;
 }
 
-div a:hover, #moon:hover{
+div a:hover, #moon:hover, #sun:hover{
     color: var(--hoverColor);
     transition:  0.3s ease;
 }

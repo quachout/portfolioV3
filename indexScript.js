@@ -3,6 +3,8 @@
 
 // BUTTON //////////////////////////////////////////////////////////////////
 
+const { Button } = require("bootstrap");
+
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
@@ -65,6 +67,7 @@ const themeSwitch = document.querySelector('#moon');
 themeSwitch.addEventListener('click', () => {
   document.body.classList.toggle('darkTheme');
 });
+
 // light theme ////////////////////////////////////////////////////
 
 // light theme2 ////////////////////////////////////////////////////

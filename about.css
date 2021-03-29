@@ -63,8 +63,10 @@ div a{
     justify-content: space-around  ;
 }
 
-div a:hover, #moon:hover{
-    color: lightgrey;
+div a:hover, #moon:hover, #sun:hover{
+    /* color: lightgrey; */
+    color: var(--hoverColor)  !important;
+    transition:  0.3s ease;
 }
 
 #navbar{
