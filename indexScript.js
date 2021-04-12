@@ -64,6 +64,7 @@ const themeSwitch = document.querySelector('#moon');
 
 themeSwitch.addEventListener('click', () => {
   document.body.classList.toggle('darkTheme');
+  localStorage.setItem('themeSwitch', 'darkTheme'); // save theme selection 
 });
 // light theme ////////////////////////////////////////////////////
 
@@ -72,6 +73,7 @@ const themeSwitch2 = document.querySelector('#moon2');
 
 themeSwitch2.addEventListener('click', () => {
   document.body.classList.toggle('darkTheme');
+  localStorage.setItem('themeSwitch2', 'darkTheme'); // save theme selection 
 });
 // light theme2 ////////////////////////////////////////////////////
 
@@ -80,6 +82,8 @@ const themeSwitch3 = document.querySelector('#sun');
 
 themeSwitch3.addEventListener('click', () => {
   document.body.classList.toggle('darkTheme');
+  // localStorage.removeItem('themeSwitch' ); // save theme selection 
+  window.localStorage.clear();
 });
 // light theme3 ////////////////////////////////////////////////////
 // light theme4 ////////////////////////////////////////////////////
@@ -87,7 +91,27 @@ const themeSwitch4 = document.querySelector('#sun2');
 
 themeSwitch4.addEventListener('click', () => {
   document.body.classList.toggle('darkTheme');
+  // localStorage.removeItem('themeSwitch2' ); // save theme selection 
+  window.localStorage.clear();
 });
 // light theme4 ////////////////////////////////////////////////////
+window.onload = function(){
+  initTheme();
+  initTheme2();
+};
+/////////////////////////////////
+function initTheme() {
+  if ((localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'darkTheme') ){
+    document.body.classList.toggle('darkTheme');
+  } 
+
+};
+function initTheme2() {
+  if ((localStorage.getItem('themeSwitch2') !== null && localStorage.getItem('themeSwitch2') === 'darkTheme') ){
+    document.body.classList.toggle('darkTheme');
+  } 
+
+};
+
 navSlide();
 
