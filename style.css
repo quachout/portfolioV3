@@ -1,101 +1,101 @@
 :root{
-    --backgroundWhite: #F7F7F7;
-    --fontBlack: black;
-    --hoverLight: lightgrey;
-    --backgroundDark: #192734;
-    --fontWhite: #EEEEEE;
-    --burgerLinesWhite: #EEEEEE;
-    --burgerLinesBlack: black;
-    --hoverDark: #555;
-    --displayNone: none;
-    --displayInitial: initial;
+  --backgroundWhite: #F7F7F7;
+  --fontBlack: black;
+  --hoverLight: lightgrey;
+  --backgroundDark: #192734;
+  --fontWhite: #EEEEEE;
+  --burgerLinesWhite: #EEEEEE;
+  --burgerLinesBlack: black;
+  --hoverDark: #555;
+  --displayNone: none;
+  --displayInitial: initial;
 }
 * {
-    transition: background-color 0.4s ease, color .2s ease;
-  }
+  transition: background-color 0.4s ease, color .2s ease;
+}
 /* color theme */
 .lightTheme{
-    --themeDropDownBg: var(--backgroundWhite);
-    --themeFontColor: var(--fontBlack);
-    --hoverColor: var(--hoverLight);
-    --burgerLinesColor: var(--burgerLinesBlack);
-    --moonIcon: var(--displayInitial);
-    --sunIcon: var(--displayNone);
+  --themeDropDownBg: var(--backgroundWhite);
+  --themeFontColor: var(--fontBlack);
+  --hoverColor: var(--hoverLight);
+  --burgerLinesColor: var(--burgerLinesBlack);
+  --moonIcon: var(--displayInitial);
+  --sunIcon: var(--displayNone);
 }
 
 .darkTheme{
-    --themeDropDownBg: var(--backgroundDark);
-    --themeFontColor: var(--fontWhite);
-    --hoverColor: var(--hoverDark);
-    --burgerLinesColor: var(--burgerLinesWhite);
-    --moonIcon: var(--displayNone);
-    --sunIcon: var(--displayInitial);
+  --themeDropDownBg: var(--backgroundDark);
+  --themeFontColor: var(--fontWhite);
+  --hoverColor: var(--hoverDark);
+  --burgerLinesColor: var(--burgerLinesWhite);
+  --moonIcon: var(--displayNone);
+  --sunIcon: var(--displayInitial);
 }
 /* color theme */
 
 body{
-    background-color: var(--themeDropDownBg) !important;
-    cursor: crosshair;
-    
+  background-color: var(--themeDropDownBg) !important;
+  cursor: crosshair;
+  
 }
 
 
 /* navbar */
 #customNav{
-    display: none;
+  display: none;
 }
 #bigNav{
-    z-index: 2;
+  z-index: 2;
 }
 .header{
-    position:fixed;
-    width:100%;
-    background-color: var(--themeDropDownBg);
-    height: 8em;
-    opacity: 85%;
-    
+  position:fixed;
+  width:100%;
+  background-color: var(--themeDropDownBg);
+  height: 8em;
+  opacity: 85%;
+  
 }
 div a{
-    text-decoration: none ;
-    list-style-type: none;
-    color: var(--themeFontColor);
-    list-style: none;
-    display: flex;
-    justify-content: space-around  ;
+  text-decoration: none ;
+  list-style-type: none;
+  color: var(--themeFontColor);
+  list-style: none;
+  display: flex;
+  justify-content: space-around  ;
 }
 
 div a:hover, #moon:hover, #sun:hover{
-    color: var(--hoverColor);
-    transition:  0.3s ease;
+  color: var(--hoverColor);
+  transition:  0.3s ease;
 }
 #moon{
-    color: var(--themeFontColor);
-    display: var(--moonIcon) ;
-    
+  color: var(--themeFontColor);
+  display: var(--moonIcon) ;
+  
 }
 #sun{
-    color: var(--themeFontColor);
-    margin-top: -.14em;
-    display: var(--sunIcon);
+  color: var(--themeFontColor);
+  margin-top: -.14em;
+  display: var(--sunIcon);
 }
 #navbar{
-    list-style-type: none;
-    
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
+  list-style-type: none;
+  
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
 
-    /* position: fixed; Set the navbar to fixed position */
+  /* position: fixed; Set the navbar to fixed position */
 
 }
 
 
 
 div logo{
-    display: inline-block;
-    margin-top: -9px !important ;
-    font-weight: 600 !important;
-    font-size: 35px !important;
+  display: inline-block;
+  margin-top: -9px !important ;
+  font-weight: 600 !important;
+  font-size: 35px !important;
 }
 
 
@@ -103,411 +103,441 @@ div logo{
 
 /* intro */
 #intro{
-    margin-top: 4em;
-    color: var(--themeFontColor);
+  margin-top: 4em;
+  color: var(--themeFontColor);
 }
 
 #what{
-    font-size: 45px;
-    font-weight: 700;
-    font-family: 'Raleway', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
 }
 
 #name{
-    margin-top: 50px;
-    font-size: 90px;
-    font-weight: 700;
-    font-family: 'Raleway', sans-serif;
+  margin-top: 50px;
+  font-size: 90px;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
 }
 
 #introParagraph{
-    margin-top: 40px;
-    /* outline-style: solid; */
-    font-size: 30px;
-    max-width: 28em;
+  margin-top: 40px;
+  /* outline-style: solid; */
+  font-size: 30px;
+  max-width: 28em;
 }
 
 #arrow{
-    margin-top: .4em;
+  margin-top: .4em;
 
-    animation: MoveUpDown 1s linear infinite;
-    position: relative;
+  animation: MoveUpDown 1s linear infinite;
+  position: relative;
 
 }
 @keyframes MoveUpDown {
-    0%, 100% {
-      bottom: 0;
-    }
-    50% {
-      bottom: 12px;
-    }
+  0%, 100% {
+    bottom: 0;
   }
+  50% {
+    bottom: 12px;
+  }
+}
 /* intro */
 
 /* projects */
 #subHeader{
-    font-size: 45px;
-    font-weight: 500;
-    color: var(--themeFontColor);
+  font-size: 45px;
+  font-weight: 500;
+  color: var(--themeFontColor);
 }
 
 #spotifyPic{
-    width: 280px;
-    height: auto;
-    border-radius: 15px;
+  width: 280px;
+  height: auto;
+  border-radius: 15px;
+}
+
+#equinixPic{
+margin-left: -1.3em;
+margin-top: 2em;
+width: 250px;
+height: auto;
+}
+#wunderpicsLogo{
+margin-left: 0.8em;
+margin-top: 2em;
+width: 180px;
+height: auto;
 }
 #rayTechPic{
-    margin-top: .8em;
-    width: 200px;
-    height: auto;
-    
+  margin-top: .8em;
+  width: 200px;
+  height: auto;
 }
 #raySASPic{
-    width: 200px;
-    height: auto;
-    margin-top: 2em;
-    border-radius: 15px;
+  width: 200px;
+  height: auto;
+  margin-top: 2em;
+  border-radius: 15px;
 }
 div projectTitle{
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--themeFontColor);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--themeFontColor);
 }
 
 div projectPosition{
-    font-size: 23px;
-    font-weight: 350;
-    color: var(--themeFontColor);
+  font-size: 23px;
+  font-weight: 350;
+  color: var(--themeFontColor);
 }
 
 div projectInfo{
-    font-size:25px ;
-    color: var(--themeFontColor);
+  font-size:25px ;
+  color: var(--themeFontColor);
 }
 
 div projectInfo span{
-    display: block;
+  display: block;
 }
 /* projects */
 
 /*social media*/
 #socials{
-    color: var(--themeFontColor);
+  color: var(--themeFontColor);
 
 }
 
 #mail{
-    margin-right: 4em;
-    transition: all 350ms ease-in-out;
+  margin-right: 4em;
+  transition: all 350ms ease-in-out;
 }
 #mail:hover{
-    color: #cecaca;
-    transform: scale(1.5);
-    color: var(--hoverColor);
-    
+  color: #cecaca;
+  transform: scale(1.5);
+  color: var(--hoverColor);
+  
 }
 #linkedin{
-    transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
 }
 #linkedin:hover{
-    color: #cecaca;
-    transform: scale(1.5);
-    color: var(--hoverColor);
+  color: #cecaca;
+  transform: scale(1.5);
+  color: var(--hoverColor);
 }
 #github{
-    margin-left: 4em;
-    transition: all 350ms ease-in-out;
+  margin-left: 4em;
+  transition: all 350ms ease-in-out;
 }
 #github:hover{
-    color: #cecaca;
-    transform: scale(1.5);
-    color: var(--hoverColor);
+  color: #cecaca;
+  transform: scale(1.5);
+  color: var(--hoverColor);
 }
 /* social media */
 
 /* footer  */
 #footerText{
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--themeFontColor);
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--themeFontColor);
 }
 
 /* scroll to top button */
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /*Fixed/sticky position */
-    bottom: 20px; /*Place the button at the bottom of the page*/
-    right: 30px;/* Place the button 30px from the right */
-    z-index: 10; /*Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #cecaca; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-    opacity: 90%;
-  }
-  
-  #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
-  }
+  display: none; /* Hidden by default */
+  position: fixed; /*Fixed/sticky position */
+  bottom: 20px; /*Place the button at the bottom of the page*/
+  right: 30px;/* Place the button 30px from the right */
+  z-index: 10; /*Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #cecaca; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 90%;
+}
 
-  /* scroll to top button */
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* scroll to top button */
 
 @media screen and (max-width:1200px){
 
-    #projectText{
-        margin-left: 2em;
-    }
+  #projectText{
+      margin-left: 2em;
+  }
 }
 @media screen and (max-width:1050px){
 
-    #projectText{
-        margin-left: 3em;
-    }
+  #projectText{
+      margin-left: 3em;
+  }
 }
 @media screen and (max-width:990px){
 
-    #projectText{
-        margin-left: 0em;
-    }
+  #projectText{
+      margin-left: 0em;
+  }
 }
 @media screen and (max-width:700px){
-    body{
-        background-color: var(--themeDropDownBg) !important;
-    }      
-    #bigNav{
-        display: none;
-    }
-    div a:hover, #moon2:hover{
-        color: var(--hoverColor);
-        transition:  0.3s ease;
-    }
-    #moon2{
-        color: var(--themeFontColor);
-        display: var(--moonIcon) ;
-        
-    }
-    #sun2{
-        color: var(--themeFontColor);
-        display: var(--sunIcon) ;
-        margin-top: -5em;
-    }
-    .header{
-        position:fixed;
-        width:100%;
-        background-color: var(--themeDropDownBg);
-        height: 8em;
-        opacity: 96%;
-        
-    }
-    #intro{
-        margin-top: 0em;
-    }
-    #what{
-        font-size: 35px;
-        font-weight: 700;
-        font-family: 'Raleway', sans-serif;
-    }
-    #name{
-        margin-top: 10px;
-        font-size: 60px;
-        font-weight: 700;
-        font-family: 'Raleway', sans-serif;
-    }
-    #introParagraph{
-        margin-top: 40px;
-        /* outline-style: solid; */
-        font-size: 25px;
-        max-width: 28em;
-        margin-top: .5em;
-    }
-    div projectTitle{
-        font-size: 25px;
-        font-weight: 500;
-        
-    }
+  body{
+      background-color: var(--themeDropDownBg) !important;
+  }      
+  #bigNav{
+      display: none;
+  }
+  div a:hover, #moon2:hover{
+      color: var(--hoverColor);
+      transition:  0.3s ease;
+  }
+  #moon2{
+      color: var(--themeFontColor);
+      display: var(--moonIcon) ;
+      
+  }
+  #sun2{
+      color: var(--themeFontColor);
+      display: var(--sunIcon) ;
+      margin-top: -5em;
+  }
+  .header{
+      position:fixed;
+      width:100%;
+      background-color: var(--themeDropDownBg);
+      height: 8em;
+      opacity: 96%;
+      
+  }
+  #intro{
+      margin-top: 0em;
+  }
+  #what{
+      font-size: 35px;
+      font-weight: 700;
+      font-family: 'Raleway', sans-serif;
+  }
+  #name{
+      margin-top: 10px;
+      font-size: 60px;
+      font-weight: 700;
+      font-family: 'Raleway', sans-serif;
+  }
+  #introParagraph{
+      margin-top: 40px;
+      /* outline-style: solid; */
+      font-size: 25px;
+      max-width: 28em;
+      margin-top: .5em;
+  }
+  div projectTitle{
+      font-size: 25px;
+      font-weight: 500;
+      
+  }
+  
+  div projectPosition{
+      font-size: 21px;
+      font-weight: 350;
+  }
+  
+  div projectInfo{
+      font-size:20px ;
+  }
+  
+  div projectInfo span{
+      display: block;
+  }
+  #subHeader{
+      font-size: 40px;
+      font-weight: 500;
+  }
+
+  #myProjects{
+      margin-top: -10em;
+  }
+  #spotifyPic{
+      width: 280px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  #equinixPic{
     
-    div projectPosition{
-        font-size: 21px;
-        font-weight: 350;
-    }
-    
-    div projectInfo{
-        font-size:20px ;
-    }
-    
-    div projectInfo span{
-        display: block;
-    }
-    #subHeader{
-        font-size: 40px;
-        font-weight: 500;
-    }
+    margin-top: 2em;
+    width: 250px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #wunderpicsLogo{
+    margin-left: 0.8em;
+    margin-top: 2em;
+    width: 180px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #rayTechPic{
+      margin-top: .8em;
+      width: 180px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  #raySASPic{
+      width: 170px;
+      height: auto;
 
-    #myProjects{
-        margin-top: -10em;
-    }
-    #spotifyPic{
-        width: 280px;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #rayTechPic{
-        margin-top: .8em;
-        width: 180px;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #raySASPic{
-        width: 170px;
-        height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  #myBtn{
+      margin-bottom: 2em;
+  }
+  /* burger nav */
+      /*my nav*/
+      #customNav{
+          display: initial;
+          
+      }
+      nav{
+          /* display: flex;///////////////////////////////////// */
+          justify-content: space-around;
+          align-items: center;
+          min-height: 8vh;
+          background-color: var(--themeDropDownBg);
+          /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
+          
+          
+      }
+      
+      .nav-links{
+          all: unset;
+          display:flex;
+          justify-content: space-around;
+          width: 100%;
+          position: absolute;
+          left:0px;
+          height:95vh;
+          top:8vh;
+          background-color: var(--themeDropDownBg);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transform:translateX(-100%); /*this is supposed to be 100*/
+          /*transition: all 0.5s ease-in;*/ /*this transition has prob w resizinf window*/
+          font-family: 'Raleway', sans-serif !important;
+          z-index:1;
+          
+          
+      }
+      
+      .nav-links li{
+          list-style:none;
+          opacity:0;
+          font-weight: 550;
+          
+          
+          
+      }
+      
+      .nav-links a{
+          text-decoration: none;
+          letter-spacing: 3px;
+          background-color: var(--themeDropDownBg);
+          font-size: 20px;
+          color: var(--themeFontColor);
+          margin-top: 0em; 
+          
+      
+      }
+      
+      .nav-links a:hover{
+          color:lightgrey;
+          transition:  0.3s ease;
+      }
+      
+      .burger{
+          display:block;
+          cursor: pointer;
+          margin-left: 3em;
+          border: 2px solid var(--burgerLinesColor);
+          border-radius: 5px;
+          background-color: var(--themeDropDownBg);
+          width: 45px;    /*had to make this adjsutment -5 */
+          height: 35px;   /* had to make this adjsutment -5 */
+          margin-top: -2.5em;
+          z-index:2;
+         
+      }
 
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #myBtn{
-        margin-bottom: 2em;
-    }
-    /* burger nav */
-        /*my nav*/
-        #customNav{
-            display: initial;
-            
-        }
-        nav{
-            /* display: flex;///////////////////////////////////// */
-            justify-content: space-around;
-            align-items: center;
-            min-height: 8vh;
-            background-color: var(--themeDropDownBg);
-            /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
-            
-            
-        }
-        
-        .nav-links{
-            all: unset;
-            display:flex;
-            justify-content: space-around;
-            width: 100%;
-            position: absolute;
-            left:0px;
-            height:95vh;
-            top:8vh;
-            background-color: var(--themeDropDownBg);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform:translateX(-100%); /*this is supposed to be 100*/
-            /*transition: all 0.5s ease-in;*/ /*this transition has prob w resizinf window*/
-            font-family: 'Raleway', sans-serif !important;
-            z-index:1;
-            
-            
-        }
-        
-        .nav-links li{
-            list-style:none;
-            opacity:0;
-            font-weight: 550;
-            
-            
-            
-        }
-        
-        .nav-links a{
-            text-decoration: none;
-            letter-spacing: 3px;
-            background-color: var(--themeDropDownBg);
-            font-size: 20px;
-            color: var(--themeFontColor);
-            margin-top: 0em; 
-            
-        
-        }
-        
-        .nav-links a:hover{
-            color:lightgrey;
-            transition:  0.3s ease;
-        }
-        
-        .burger{
-            display:block;
-            cursor: pointer;
-            margin-left: 3em;
-            border: 2px solid var(--burgerLinesColor);
-            border-radius: 5px;
-            background-color: var(--themeDropDownBg);
-            width: 45px;    /*had to make this adjsutment -5 */
-            height: 35px;   /* had to make this adjsutment -5 */
-            margin-top: -2.5em;
-            z-index:2;
-           
-        }
+      .burger div{
+          width:25px;
+          height: 2px;
+          background-color: var(--burgerLinesColor);
+          margin:5px;
+          transition: all 0.3s ease;
+          margin-left: .49em; /*size adjustment*/
+          
+          
+      }
 
-        .burger div{
-            width:25px;
-            height: 2px;
-            background-color: var(--burgerLinesColor);
-            margin:5px;
-            transition: all 0.3s ease;
-            margin-left: .49em; /*size adjustment*/
-            
-            
-        }
+      .nav-active{
+          transform: translateX(0%);
+      }
+      
+      @keyframes navLinkFade{
+          from{
+              opacity:0;
+              transform:translateX(50px);
+          }
+          to{
+              opacity: 1;
+              transform: translateX(0px);
+          }
+      }
+      #line1{
+          margin-top: .45em; /*size adjustment*/
+      }
 
-        .nav-active{
-            transform: translateX(0%);
-        }
-        
-        @keyframes navLinkFade{
-            from{
-                opacity:0;
-                transform:translateX(50px);
-            }
-            to{
-                opacity: 1;
-                transform: translateX(0px);
-            }
-        }
-        #line1{
-            margin-top: .45em; /*size adjustment*/
-        }
-
-        .toggle .line1{
-            transform: rotate(-45deg) translate(-5px,6px);
-            background-color: grey;
-        }
-        .toggle .line2{
-            opacity: 0;
-        }
-        .toggle .line3{
-            transform: rotate(45deg) translate(-4px,-5px);
-            background-color: grey;
-        }
-        
-        .myLogo{
-            font-size: 35px;
-            font-weight: 600;
-            font-family: 'Raleway', sans-serif !important;
-            color: var(--themeFontColor) !important;
-            margin-top: 1.17em;
-            z-index:2;
-        }
-    
-        /* footer  */
-        #footerText{
-            text-align: center;
-        }
-           
-        /* my nav */
+      .toggle .line1{
+          transform: rotate(-45deg) translate(-5px,6px);
+          background-color: grey;
+      }
+      .toggle .line2{
+          opacity: 0;
+      }
+      .toggle .line3{
+          transform: rotate(45deg) translate(-4px,-5px);
+          background-color: grey;
+      }
+      
+      .myLogo{
+          font-size: 35px;
+          font-weight: 600;
+          font-family: 'Raleway', sans-serif !important;
+          color: var(--themeFontColor) !important;
+          margin-top: 1.17em;
+          z-index:2;
+      }
+  
+      /* footer  */
+      #footerText{
+          text-align: center;
+      }
+         
+      /* my nav */
 }
