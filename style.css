@@ -115,7 +115,7 @@ div logo{
 
 #name{
   margin-top: 50px;
-  font-size: 90px;
+  font-size: 67px;
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
 }
@@ -146,13 +146,13 @@ div logo{
 
 /* projects */
 #subHeader{
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 500;
   color: var(--themeFontColor);
 }
 
 #spotifyPic{
-  width: 280px;
+  width: 200px;
   height: auto;
   border-radius: 15px;
 }
@@ -181,36 +181,67 @@ height: auto;
   border-radius: 15px;
 }
 div projectTitle{
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--themeFontColor);
 }
 
 div projectPosition{
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 350;
   color: var(--themeFontColor);
 }
 
 div projectInfo{
-  font-size:25px ;
+  font-size:20px ;
   color: var(--themeFontColor);
 }
 
 div projectInfo span{
   display: block;
 }
+
+#compName{
+  text-align:left;
+  font-weight: 600;
+}
+#experience-date{
+  text-align: right;
+}
+#role{
+  text-align: left;
+  /* margin-left: 5.2em; */
+  font-style: italic;
+}
+.containerExp{
+  max-width: 1000px;
+  /* border: 2px solid var(--burgerLinesColor); */
+  color: var(--themeFontColor);
+  margin: auto;
+  font-size: 20px;
+}
+.container{
+  /* border: 2px solid var(--burgerLinesColor); */
+}
 /* projects */
 
 /*social media*/
-#socials{
-  color: var(--themeFontColor);
+#social-icons{
+   /* border: 2px solid var(--burgerLinesColor); */
 
 }
-
+#socials{
+  color: var(--themeFontColor);
+  
+}
+#socials-container{
+  
+  border: 2px solid var(--burgerLinesColor);
+}
 #mail{
   margin-right: 4em;
   transition: all 350ms ease-in-out;
+
 }
 #mail:hover{
   color: #cecaca;
@@ -220,6 +251,7 @@ div projectInfo span{
 }
 #linkedin{
   transition: all 350ms ease-in-out;
+
 }
 #linkedin:hover{
   color: #cecaca;
@@ -229,6 +261,7 @@ div projectInfo span{
 #github{
   margin-left: 4em;
   transition: all 350ms ease-in-out;
+
 }
 #github:hover{
   color: #cecaca;
@@ -320,20 +353,20 @@ div projectInfo span{
       margin-top: 0em;
   }
   #what{
-      font-size: 35px;
+      font-size: 22px;
       font-weight: 700;
       font-family: 'Raleway', sans-serif;
   }
   #name{
-      margin-top: 10px;
-      font-size: 60px;
+      margin-top: 30px;
+      font-size: 32px;
       font-weight: 700;
       font-family: 'Raleway', sans-serif;
   }
   #introParagraph{
-      margin-top: 40px;
+      padding-top: 20px;
       /* outline-style: solid; */
-      font-size: 25px;
+      font-size: 22px;
       max-width: 28em;
       margin-top: .5em;
   }
@@ -356,7 +389,7 @@ div projectInfo span{
       display: block;
   }
   #subHeader{
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 500;
   }
 
@@ -364,7 +397,7 @@ div projectInfo span{
       margin-top: -10em;
   }
   #spotifyPic{
-      width: 280px;
+      width: 200px;
       height: auto;
       display: block;
       margin-left: auto;
