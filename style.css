@@ -207,6 +207,7 @@ div projectInfo span{
 }
 #experience-date{
   text-align: right;
+
 }
 #role{
   text-align: left;
@@ -439,6 +440,11 @@ div projectInfo span{
   }
   #myBtn{
       margin-bottom: 2em;
+  }
+  #experience-date{
+    text-align: right;
+    font-size: 18px;  
+  
   }
   /* burger nav */
       /*my nav*/
