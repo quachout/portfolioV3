@@ -1,6 +1,3 @@
-
-
-
 // BUTTON //////////////////////////////////////////////////////////////////
 
 //Get the button:
@@ -59,42 +56,23 @@ const navSlide = () => {
 }
 // navBar button //////////////////////////////////////////////////
 
-// light theme ////////////////////////////////////////////////////
+// Theme toggle functionality
+function toggleTheme() {
+  document.documentElement.classList.toggle('darkTheme');
+  const isDark = document.documentElement.classList.contains('darkTheme');
+  localStorage.setItem('themeSwitch', isDark ? 'darkTheme' : '');
+}
+
 const themeSwitch = document.querySelector('#moon');
-
-themeSwitch.addEventListener('click', () => {
-  document.body.classList.toggle('darkTheme');
-  localStorage.setItem('themeSwitch', 'darkTheme'); // save theme selection 
-});
-// light theme ////////////////////////////////////////////////////
-
-// light theme2 ////////////////////////////////////////////////////
 const themeSwitch2 = document.querySelector('#moon2');
-
-themeSwitch2.addEventListener('click', () => {
-  document.body.classList.toggle('darkTheme');
-  localStorage.setItem('themeSwitch2', 'darkTheme'); // save theme selection 
-});
-// light theme2 ////////////////////////////////////////////////////
-
-// light theme3 ////////////////////////////////////////////////////
 const themeSwitch3 = document.querySelector('#sun');
-
-themeSwitch3.addEventListener('click', () => {
-  document.body.classList.toggle('darkTheme');
-  // localStorage.removeItem('themeSwitch' ); // save theme selection 
-  window.localStorage.clear();
-});
-// light theme3 ////////////////////////////////////////////////////
-// light theme4 ////////////////////////////////////////////////////
 const themeSwitch4 = document.querySelector('#sun2');
 
-themeSwitch4.addEventListener('click', () => {
-  document.body.classList.toggle('darkTheme');
-  // localStorage.removeItem('themeSwitch2' ); // save theme selection 
-  window.localStorage.clear();
-});
-// light theme4 ////////////////////////////////////////////////////
+themeSwitch?.addEventListener('click', toggleTheme);
+themeSwitch2?.addEventListener('click', toggleTheme);
+themeSwitch3?.addEventListener('click', toggleTheme);
+themeSwitch4?.addEventListener('click', toggleTheme);
+
 window.onload = function(){
   initTheme();
   initTheme2();
