@@ -7,6 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chris Quach</title>
 
+  <script>
+    // Check theme preference before page loads
+    (function() {
+      const savedTheme = localStorage.getItem('themeSwitch') || localStorage.getItem('themeSwitch2');
+      if (savedTheme === 'darkTheme') {
+        document.documentElement.classList.add('darkTheme');
+      }
+    })();
+  </script>
+
   <link href="style.css" rel="stylesheet" type="text/css">
 
   <!--boostrap-->
@@ -136,7 +146,7 @@
       a software engineer creating technology that will bring us closer to the future. 🚀
       <br>
       <br>
-      <!-- I’m a <b>fourth year computer science</b> student with a minor in informatics at University of California, Irvine. -->
+      <!-- I'm a <b>fourth year computer science</b> student with a minor in informatics at University of California, Irvine. -->
       I graduated with a <b>computer science</b> degree & a minor in informatics from University of California, Irvine.
       <br>
       <br>
@@ -212,7 +222,7 @@
         <br>
         <br>
         <projectInfo>Spotify Playlist Automation was designed to help listeners who have multiple playlists determine if
-          a song is a duplicate using Spotify’s API.
+          a song is a duplicate using Spotify's API.
 
         </projectInfo>
       </div>

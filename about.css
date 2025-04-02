@@ -10,12 +10,9 @@
     --displayNone: none;
     --displayInitial: initial;
 }
-* {
-    transition: background-color 0.4s ease, color .2s ease;
-    
-  }
-/* color theme */
-.lightTheme{
+
+/* Default light theme */
+:root {
     --themeDropDownBg: var(--backgroundWhite);
     --themeFontColor: var(--fontBlack);
     --hoverColor: var(--hoverLight);
@@ -24,7 +21,8 @@
     --sunIcon: var(--displayNone);
 }
 
-.darkTheme{
+/* Dark theme */
+:root.darkTheme {
     --themeDropDownBg: var(--backgroundDark);
     --themeFontColor: var(--fontWhite);
     --hoverColor: var(--hoverDark);
@@ -32,14 +30,16 @@
     --moonIcon: var(--displayNone);
     --sunIcon: var(--displayInitial);
 }
-/* color theme */
 
+* {
+    transition: background-color 0.4s ease, color .2s ease;
+}
 
-body{
+body {
     background-color: var(--themeDropDownBg) !important;
     cursor: crosshair;
-    
 }
+
 #aboutText{
     color: var(--themeFontColor) !important;
 }
