@@ -2,15 +2,34 @@
 
 //Get the button:
 mybutton = document.getElementById("myBtn");
+scrollHint = document.querySelector(".scroll-hint");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    mybutton.style.display = "block";
+  const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  
+  // Up arrow button behavior
+  if (scrollTop > 50) {
+    mybutton.style.display = "flex";
+    mybutton.style.opacity = "1";
   } else {
-    mybutton.style.display = "none";
+    mybutton.style.opacity = "0";
+    setTimeout(() => {
+      if (mybutton.style.opacity === "0") {
+        mybutton.style.display = "none";
+      }
+    }, 300);
+  }
+  
+  // Scroll hint behavior - fade out when scrolling, fade in when back at top
+  if (scrollHint) {
+    if (scrollTop > 100) {
+      scrollHint.style.opacity = "0";
+    } else {
+      scrollHint.style.opacity = "0.7";
+    }
   }
 }
 
@@ -51,6 +70,18 @@ const navSlide = () => {
 
 
       burger.classList.toggle('toggle');
+  });
+  
+  // Close navbar when clicking on nav links
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-active');
+      burger.classList.remove('toggle');
+      // Reset animations
+      navLinks.forEach(navLink => {
+        navLink.style.animation = '';
+      });
+    });
   });
 
 }
