@@ -832,7 +832,7 @@ div projectInfo span{
       text-align: left;
   }
   
-  #intro #what, #intro #name, #intro #introParagraph {
+  #intro #what, #intro #introParagraph {
       font-size: 1.3em;
   }
   #what{
@@ -842,7 +842,7 @@ div projectInfo span{
   }
   #name{
       margin-top: 30px;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 700;
       font-family: 'Raleway', sans-serif;
   }
