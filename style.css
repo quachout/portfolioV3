@@ -325,6 +325,13 @@ div logo{
   line-height: 1.2;
 }
 
+.project-title-tile a {
+  color: var(--themeFontColor);
+  text-decoration: none;
+  text-align: left;
+  display: block;
+}
+
 .project-tile.large .project-title-tile {
   font-size: 2rem;
   margin-bottom: 1.5rem;
