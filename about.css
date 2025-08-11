@@ -51,6 +51,12 @@ body {
     position: fixed;
     margin-top:0em ;
     opacity: 96%;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    height: 3.5em;
+    opacity: 98%;
 }
 #customNav{
     display: none;
