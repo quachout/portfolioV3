@@ -70,14 +70,34 @@ html {
 }
 #bigNav{
   z-index: 2;
+  position:fixed;
+  width:100%;
+  background-color: var(--themeDropDownBg);
+  height: 6em;
+  opacity: 85%;
+  transition: all 0.3s ease;
 }
+
+#bigNav.scrolled {
+  height: 4em;
+  opacity: 95%;
+}
+
+#bigNav .row {
+  transition: all 0.3s ease;
+}
+
+#bigNav.scrolled .row {
+  margin-top: 20px !important;
+}
+
 .header{
   position:fixed;
   width:100%;
   background-color: var(--themeDropDownBg);
   height: 6em;
   opacity: 85%;
-  
+  transition: all 0.3s ease;
 }
 div a{
   text-decoration: none ;
@@ -820,7 +840,12 @@ div projectInfo span{
       height: 6em;
       opacity: 100%;
       z-index: 998;
+      transition: all 0.3s ease;
       
+  }
+  
+  .header.scrolled {
+    height: 4em;
   }
   #intro{
       margin-top: 0em;

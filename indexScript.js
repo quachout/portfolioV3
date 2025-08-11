@@ -9,6 +9,14 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  const bigNav = document.querySelector('#bigNav');
+  
+  // Navbar shrink effect
+  if (scrollTop > 80) {
+    bigNav?.classList.add('scrolled');
+  } else {
+    bigNav?.classList.remove('scrolled');
+  }
   
   // Up arrow button behavior
   if (scrollTop > 50) {
