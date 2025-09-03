@@ -49,10 +49,12 @@
   transition: background-color 0.4s ease, color .2s ease;
 }
 
+
 body {
   background-color: var(--themeDropDownBg) !important;
   cursor: crosshair;
   overflow-x: hidden;
+  touch-action: pan-y;
 }
 
 html {
@@ -115,21 +117,21 @@ div a:hover, #moon:hover, #sun:hover{
 #moon{
   color: var(--themeFontColor);
   display: var(--moonIcon);
-  width: 1.8rem;
+  width: 1.5rem;
   
 }
 #sun{
   color: var(--themeFontColor);
-  margin-top: -.14em;
+  margin-top: 0;
   display: var(--sunIcon);
-  width: 1.8rem;
+  width: 1.5rem;
 }
 #navbar{
   list-style-type: none;
   
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 
   /* position: fixed; Set the navbar to fixed position */
 
@@ -141,7 +143,7 @@ div logo{
   display: inline-block;
   margin-top: -9px !important ;
   font-weight: 600 !important;
-  font-size: 28px !important;
+  font-size: 25px !important;
 }
 
 
@@ -166,22 +168,22 @@ div logo{
 }
 
 #what{
-  font-size: 45px;
+  font-size: 38px;
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
 }
 
 #name{
-  margin-top: 50px;
-  font-size: 67px;
+  margin-top: 40px;
+  font-size: 56px;
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
 }
 
 #introParagraph{
-  margin-top: 40px;
+  margin-top: 32px;
   /* outline-style: solid; */
-  font-size: 30px;
+  font-size: 26px;
   max-width: 28em;
 }
 
@@ -213,6 +215,19 @@ div logo{
   transition: opacity 0.3s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint {
+    animation: none;
+  }
+}
+
+@media screen and (max-width:700px){
+  .scroll-hint {
+    font-size: 0.8rem;
+    bottom: 1.5rem;
+  }
+}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateX(-50%) translateY(0);
@@ -241,11 +256,15 @@ div logo{
 /* intro */
 
 /* projects */
+#myProjects {
+  touch-action: pan-y;
+}
+
 #subHeader{
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   font-weight: 600;
   color: var(--themeFontColor);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   text-align: left;
   font-family: 'Raleway', sans-serif;
   display: flex;
@@ -255,7 +274,7 @@ div logo{
 
 .header-accent {
   color: var(--themeFontColor);
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 300;
   opacity: 0.4;
 }
@@ -267,6 +286,7 @@ div logo{
   grid-auto-rows: minmax(200px, auto);
   gap: 1.5rem;
   margin-top: 2rem;
+  touch-action: pan-y;
 }
 
 /* Project Tiles */
@@ -277,6 +297,7 @@ div logo{
   cursor: pointer;
   transform: translateY(0);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  touch-action: pan-y;
 }
 
 .project-tile:hover {
@@ -295,7 +316,7 @@ div logo{
 
 .project-layout-full {
   display: flex;
-  gap: 2rem;
+  gap: 1.6rem;
   align-items: flex-start;
 }
 
@@ -349,7 +370,7 @@ div logo{
 .project-content-tile {
   position: relative;
   z-index: 2;
-  padding: 2rem;
+  padding: 1.6rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -368,10 +389,10 @@ div logo{
 
 /* Project Title */
 .project-title-tile {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--themeFontColor);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-family: 'Raleway', sans-serif;
   line-height: 1.2;
 }
@@ -384,38 +405,40 @@ div logo{
 }
 
 .project-tile.large .project-title-tile {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  margin-bottom: 1.2rem;
 }
 
 /* Project Description */
 .project-description-tile {
   color: var(--themeFontColor);
   opacity: 0.8;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  font-size: 0.88rem;
   flex-grow: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .project-tile.large .project-description-tile {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Tech Stack */
 .tech-stack-tile {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .tech-pill {
   background: rgba(128, 128, 128, 0.08);
   color: var(--themeFontColor);
-  padding: 0.4rem 1rem;
-  border-radius: 25px;
-  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid rgba(128, 128, 128, 0.15);
   transition: all 0.2s ease;
@@ -431,8 +454,8 @@ div logo{
 /* Project Metrics */
 .project-metrics-tile {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .metric-tile {
@@ -441,7 +464,7 @@ div logo{
 
 .metric-number {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--themeFontColor);
   font-family: 'Raleway', sans-serif;
@@ -461,19 +484,19 @@ div logo{
 /* Project Image */
 .project-image-tile {
   position: absolute;
-  right: 2rem;
-  bottom: 2rem;
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
+  right: 1.6rem;
+  bottom: 1.6rem;
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
   overflow: hidden;
   border: none;
   transition: all 0.3s ease;
 }
 
 .project-image-tile.small-image {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 
 .project-image-tile.centered-image {
@@ -481,15 +504,15 @@ div logo{
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   z-index: 1;
   opacity: 1;
 }
 
 .project-tile.large .project-image-tile {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .project-image-tile img {
@@ -574,23 +597,23 @@ div projectInfo span{
   text-align: left;
   width: 100%;
   max-width: 1200px;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   margin-top: 60px;
-  padding-left: 15px;
+  padding-left: 0;
 }
 
 .experience-timeline {
   width: 100%;
   max-width: 1200px;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .experience-card {
   background: var(--themeDropDownBg);
   border: 1px solid rgba(128, 128, 128, 0.2);
   border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
+  padding: 1.6rem;
+  margin-bottom: 1.2rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -685,7 +708,7 @@ div projectInfo span{
   height: 1px;
   background-color: var(--themeFontColor);
   opacity: 0.15;
-  margin: 80px auto;
+  margin: 60px auto;
   max-width: 1000px;
   z-index: 1;
   position: relative;
@@ -697,6 +720,12 @@ div projectInfo span{
     margin: 60px auto;
     max-width: calc(100% - 30px);
     z-index: 0;
+  }
+  
+  /* Mobile container spacing */
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 /* Section Dividers */
@@ -792,8 +821,7 @@ div projectInfo span{
 #myBtn {
   position: fixed; /*Fixed/sticky position */
   bottom: 100px; /*Move up a bit more*/
-  left: 50%;
-  transform: translateX(600px);/* Move further right to align under sun icon */
+  right: max(20px, calc(50vw - 640px)); /* Align with theme toggle icon, fallback to edge */
   z-index: 10; /*Make sure it does not overlap */
   border: 2px solid var(--themeFontColor); /* Theme-aware border */
   outline: none; /* Remove outline */
@@ -802,9 +830,9 @@ div projectInfo span{
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 0; /* Remove padding for better centering */
   border-radius: 50%; /* Make it circular */
-  font-size: 14px; /* Smaller font */
-  width: 38px; /* Smaller width */
-  height: 38px; /* Smaller height */
+  font-size: 12px; /* Smaller font */
+  width: 32px; /* Smaller width */
+  height: 32px; /* Smaller height */
   display: none; /* Hidden by default */
   align-items: center;
   justify-content: center;
@@ -813,13 +841,15 @@ div projectInfo span{
 }
 
 #myBtn svg {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
-#myBtn:hover {
-  background-color: var(--hoverColor); /* Theme-aware hover */
-  opacity: 1;
+@media (hover: hover) {
+  #myBtn:hover {
+    background-color: var(--hoverColor); /* Theme-aware hover */
+    opacity: 1;
+  }
 }
 
 /* scroll to top button */
@@ -848,6 +878,19 @@ div projectInfo span{
   }      
   #bigNav{
       display: none;
+  }
+  
+  /* Mobile up button positioning */
+  #myBtn {
+    bottom: 30px !important;
+    right: 20px !important;
+  }
+  
+  /* Mobile Masonry */
+  .projects-masonry {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    grid-auto-rows: minmax(180px, auto);
   }
   div a:hover, #moon2:hover{
       color: var(--hoverColor);
@@ -1035,6 +1078,8 @@ div projectInfo span{
       justify-content: center;
       align-items: center;
       text-align: left;
+      overflow-x: hidden;
+      width: 100%;
   }
 
   #myProjects .container {
@@ -1207,7 +1252,7 @@ div projectInfo span{
           /* display: flex;///////////////////////////////////// */
           justify-content: space-around;
           align-items: center;
-          min-height: 8vh;
+          min-height: 7vh;
           background-color: var(--themeDropDownBg);
           /* box-shadow: 0 0 .6rem rgb(0,0,0.2); */
           z-index: 999;
@@ -1221,12 +1266,12 @@ div projectInfo span{
       .nav-links{
           all: unset;
           display:flex;
-          justify-content: space-around;
+          justify-content: center;
           width: 100%;
           position: absolute;
           left:0px;
           height:95vh;
-          top:8vh;
+          top:7vh;
           background-color: var(--themeDropDownBg);
           display: flex;
           flex-direction: column;
@@ -1235,6 +1280,7 @@ div projectInfo span{
           /*transition: all 0.5s ease-in;*/ /*this transition has prob w resizinf window*/
           font-family: 'Raleway', sans-serif !important;
           z-index:1;
+          gap: 3rem;
           
           
       }
@@ -1243,6 +1289,7 @@ div projectInfo span{
           list-style:none;
           opacity:0;
           font-weight: 550;
+          margin: 0;
           
           
           
@@ -1250,11 +1297,14 @@ div projectInfo span{
       
       .nav-links a{
           text-decoration: none;
-          letter-spacing: 3px;
+          letter-spacing: 2px;
           background-color: var(--themeDropDownBg);
-          font-size: 20px;
+          font-size: 18px;
           color: var(--themeFontColor);
-          margin-top: 0em; 
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           
       
       }
@@ -1271,18 +1321,18 @@ div projectInfo span{
           align-items: center;
           cursor: pointer;
           background-color: transparent;
-          width: 30px;
-          height: 30px;
+          width: 26px;
+          height: 26px;
           z-index:1000;
           transition: all 0.3s ease;
       }
 
       .burger div{
-          width:24px;
-          height: 3px;
+          width:20px;
+          height: 2.5px;
           background-color: var(--burgerLinesColor);
-          margin: 4px 0;
-          transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          margin: 3px 0;
+          transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.1s ease;
           border-radius: 3px;
           
           
@@ -1303,22 +1353,28 @@ div projectInfo span{
           }
       }
 
-      .burger:hover div{
-          background-color: var(--hoverColor);
+      @media (hover: hover) {
+        .burger:hover div{
+            background-color: var(--hoverColor);
+        }
+      }
+      
+      .burger.toggle div{
+          background-color: var(--burgerLinesColor);
       }
 
       .toggle .line1{
-          transform: rotate(45deg) translate(7px,7px);
+          transform: rotate(45deg) translate(6px,6px);
       }
       .toggle .line2{
           opacity: 0;
       }
       .toggle .line3{
-          transform: rotate(-45deg) translate(7px,-7px);
+          transform: rotate(-45deg) translate(6px,-6px);
       }
       
       .myLogo{
-          font-size: 35px;
+          font-size: 30px;
           font-weight: 600;
           font-family: 'Raleway', sans-serif !important;
           color: var(--themeFontColor) !important;
@@ -1327,7 +1383,7 @@ div projectInfo span{
       }
 
       #customNav .container-fluid {
-          height: 8vh;
+          height: 7vh;
           padding: 0 15px;
       }
 
