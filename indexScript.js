@@ -95,11 +95,24 @@ const navSlide = () => {
 }
 // navBar button //////////////////////////////////////////////////
 
+// Theme color update for mobile status bar
+function updateThemeColor(isDark) {
+  let metaThemeColor = document.querySelector("meta[name=theme-color]");
+  if (!metaThemeColor) {
+    metaThemeColor = document.createElement("meta");
+    metaThemeColor.name = "theme-color";
+    document.getElementsByTagName('head')[0].appendChild(metaThemeColor);
+  }
+  metaThemeColor.content = isDark ? '#192734' : '#F7F7F7';
+}
+
 // Theme toggle functionality
 function toggleTheme() {
   document.documentElement.classList.toggle('darkTheme');
+  document.body.classList.toggle('darkTheme');
   const isDark = document.documentElement.classList.contains('darkTheme');
   localStorage.setItem('themeSwitch', isDark ? 'darkTheme' : '');
+  updateThemeColor(isDark);
 }
 
 const themeSwitch = document.querySelector('#moon');
@@ -118,10 +131,12 @@ window.onload = function(){
 };
 /////////////////////////////////
 function initTheme() {
-  if ((localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'darkTheme') ){
-    document.body.classList.toggle('darkTheme');
-  } 
-
+  const isDark = (localStorage.getItem('themeSwitch') !== null && localStorage.getItem('themeSwitch') === 'darkTheme');
+  if (isDark) {
+    document.documentElement.classList.add('darkTheme');
+    document.body.classList.add('darkTheme');
+  }
+  updateThemeColor(isDark);
 };
 function initTheme2() {
   if ((localStorage.getItem('themeSwitch2') !== null && localStorage.getItem('themeSwitch2') === 'darkTheme') ){
