@@ -174,17 +174,19 @@ div logo{
 }
 
 #name{
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 56px;
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
 }
 
 #introParagraph{
-  margin-top: 32px;
+  margin-top: 30px;
   /* outline-style: solid; */
   font-size: 26px;
   max-width: 28em;
+  color: var(--themeFontColor);
+  opacity: 0.7;
 }
 
 #arrow{
@@ -946,13 +948,13 @@ div projectInfo span{
       font-family: 'Raleway', sans-serif;
   }
   #name{
-      margin-top: 30px;
+      margin-top: 15px;
       font-size: 28px;
       font-weight: 700;
       font-family: 'Raleway', sans-serif;
   }
   #introParagraph{
-      padding-top: 20px;
+      padding-top: 15px;
       /* outline-style: solid; */
       font-size: 22px;
       max-width: 28em;
